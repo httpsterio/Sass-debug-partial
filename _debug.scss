@@ -1,0 +1,24 @@
+// ADDS BORDERS TO ALL ELEMENTS TO DEBUG LAYOUT ISSUES
+// adds an inline border to every element. using box-shadow instead of border to not actually pad anything,
+* {
+    box-shadow:inset 0px 0px 0px 1px #000!important;
+}
+
+// HILIGHTS ALL KEYBOARD FOCUSABLE ELEMENTS WITH RED
+// selector that targets any html element that can receive focus and checks that it's not disabled and hasn't got a negative tab index
+// (which would make it un-focusable)
+a[href],
+area[href],
+input:not([disabled]),
+select:not([disabled]),
+textarea:not([disabled]),
+button:not([disabled]),
+iframe,
+[tabindex],
+[contentEditable=true]
+{
+    &:not([tabindex='-1'])
+    {
+        box-shadow:inset 0px 0px 0px 2px #f00!important;
+    }
+}
