@@ -19,7 +19,9 @@ and wrapping your import statement into an if statement
     {% endif %}
     
 Or alternatively have a separate _debug_config.yml with
+
     debugscss:true
     
 and run jekyll with the --config flag 
+
     jekyll build --config "_config.yml,_debug_config.yml"
